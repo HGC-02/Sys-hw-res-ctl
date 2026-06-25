@@ -15,7 +15,7 @@ while true; do
     # 彈出輸入框
     CPU_VALUE=$(dialog --output-fd 1 \
         --title "CPU 限制設定" \
-        --inputbox "請輸入最大 CPU mzh：" 8 50)
+        --inputbox "請輸入最小 CPU mzh：" 8 50)
     
     # 1. 檢查是否按了取消或 ESC
     if [ $? -ne 0 ]; then
@@ -38,5 +38,7 @@ while true; do
     # 4. 如果通過以上所有檢查，代表輸入正確，跳出迴圈
     break
 done
+
+# 順利拿到正確的資料，傳給後續程式
 
 sudo bash backend/cpu_max.sh $CPU_VALUE $(echo "${CORE[@]}" | sed 's/ /,/g')
