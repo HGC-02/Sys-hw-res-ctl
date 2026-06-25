@@ -22,7 +22,6 @@ IFS=',' read -r -a target_array <<< "$input_str"
 echo "還原後的陣列第一個元素: ${target_array[0]}"
 echo "$input_str"
 echo "$TARGET_FREQ"
-exit 0
 for i in 0 "$target_array"; do
   PATH_MAX="/sys/devices/system/cpu/cpu${i}/cpufreq/scaling_max_freq"
     if [ -f "$PATH_MAX" ]; then
