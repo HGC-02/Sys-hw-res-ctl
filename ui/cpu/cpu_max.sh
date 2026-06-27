@@ -1,6 +1,6 @@
 CORE=$(dialog --output-fd 1 \
     --title "core" \
-    --checklist "chose your target CORE：" 13 50 4\
+    --checklist "請選擇cpu核心名稱：" 13 50 4\
     "0" "core 0" ON_or_OFF \
     "1" "core 1" ON_or_OFF \
     "2" "core 2" ON_or_OFF \
@@ -15,7 +15,7 @@ while true; do
     # 彈出輸入框
     CPU_VALUE=$(dialog --output-fd 1 \
         --title "CPU 限制設定" \
-        --inputbox "請輸入最大 CPU mzh：" 8 50)
+        --inputbox "請輸入最大 CPU zh：" 8 50)
     
     # 1. 檢查是否按了取消或 ESC
     if [ $? -ne 0 ]; then
