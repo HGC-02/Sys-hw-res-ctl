@@ -5,5 +5,5 @@ pwd
 case $FRUIT in 
   1) bash ui/cpu/cpu_max.sh ;;
   2) bash ui/cpu/cpu_min.sh ;;
-  3) sudo bash ui/cpu/gpu_grover.sh
+  3) sudo bash ui/cpu/cpu_grover.sh
 esac
